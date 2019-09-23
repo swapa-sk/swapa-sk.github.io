@@ -1,0 +1,21 @@
+
+body{
+ background:url("tile1.jpg") repeat;	
+	margin:5%;
+}
+img{
+	max-width:60%;
+}
+.mommy{
+	color:white;
+	text-align:center;
+	width:100%
+}
+.button{
+	
+	width:24%;
+	margin:.5%;
+	float:left;
+	
+	background:skyblue;
+}

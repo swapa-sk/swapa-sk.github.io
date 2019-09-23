@@ -1,0 +1,40 @@
+body{
+	text-align:center;
+	background:url('tile1.jpg') repeat;
+}
+header,nav,section,article,hgroup,aside,footer{
+	display:block;
+}
+#skin{
+	width:700px;
+	margin:50% auto;
+	padding:5px 0px;
+	background:black;
+	border-radius:10px;
+	border:2px solid black;
+	}
+nav{
+	margin:5px 0px;
+}
+#button{
+	float:left;
+	width:70px;
+	height:15px;
+
+	
+ }
+ #defaultbar{
+	 position:relative;
+	 width:600px;
+	 height:8px;
+	 background:yellow;
+	 float:left;
+	 padding:4px;
+	 
+ }
+ #progressbar{
+	 position:absolute;
+	 width:0px;
+	 height:8px;
+	 background:blue;
+ }
