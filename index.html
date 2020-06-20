@@ -1,114 +1,309 @@
-<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN"
-http://www.w3.org/TR/xhtml1-transitional.dtd">
-<html>
-    <head>
-	<title>
-	swapa is awesome
-	</title>
-	<!--meta name="viewport"
-	      content="width=device-width,initial-scale=1.0"-->
-	
-	    <style type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>swapa_tamamg</title>
+    <style>
+        .mySlides {display:none;}
+        .checked {
+            color: orange;
+        }
 
-	
-	  h1{
-	<!--color:green;-->
-	
-	font-family:arial;
-	line-height:130%;
-	line-height:150%;
-	font-weight:bold;
-	font-style:italic;
-	text-align:center;
-	text-indent:35px;
-	font-size:500%;
-	<!--background-color:yellow;-->
-	}
-	body{
-	background-color:yellow;
-	color:blue;
-	background-image:url(swap.jpg);
-	<!--img src="swapa-max.github.io/swap.jpg"/-->
-	background-repeat:no-repeat;
-	
-	background-size:720px,1280px;
-	
-	}
+        body{
+            background-color:black;
+            color:cyan;
 
-</style>
- </head>
+        }
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
 
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {font-size: 20px}
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+    </style>
+
+
+
+
+
+
+</head>
 <body>
-<h1>welcome</h1>
 
- <p><h1><marquee>my website is under construction....see you soon...note: i am doing it for my learning purpose</marquee></h1></p>
-	<br/>
- <script type="text/javascript">
-		function funky(){
-	alert("ouch!!!");//alert=popup button
-	}
- </script>
-	 <form action="swapa" method="post">
- <h3> username: <input type="text" name="username" value="enter name here"/>
-  <br/>
-  password:<input type="password" name="pword"/>
-  <br/>
-  male:<input type="radio" name="sex" value="male"/>
-  female:<input type="radio" name="sex" value="female"/>
-  <br/>
-  <p>select the items you like</p>
-  pizza :<input type="checkbox" name="item" size="4"value="pizza"/>
-  burger:<input type="checkbox" name="item" value="burger"/>
-  noodle:<input type="checkbox" name="item" value="noodle"/>
-  hot dog:<input type="checkbox" name="item" value="hot dog"/>
-  <br/>
-  ice cream:<input type="checkbox" name="item" value="ice cream"/>
-  pani puri:<input type="checkbox" name="item" value="pani puri"/>
-  jhal muri:<input type="checkbox" name="item" value="jhal muri"/>
-  kfc:<input type="checkbox" name="item" value="kfc"/>
-  <br/>
-  dominos:<input type="checkbox" name="item" value="dominos"/>
-  zomato:<input type="checkbox" name="item" value="zomato"/>
-  uber eats:<input type="checkbox" name="item" value="uber eats"/>
-  ola:<input type="checkbox" name="item" value="ola"/>
-  <br/>
-  uber:<input type="checkbox" name="item" value="uber"/>
-  amazon:<input type="checkbox" name="item" value="amazon"/>
-  flipkart:<input type="checkbox" name="item" value="flipkart"/>
-	 <br/>
-	 <br/>
-  what do you want to do today?
-  <select name="activities">
-  <option value="dance">dance like a pro</option>
-  <option value="hang">hang out with friends</option>
-  <option value="music">music all day</option>
-  <option value="beer">chilled beer and friends</option>
-  <option value="ride">long ride with your beast </option>
-  </select>
-  </br>
-		 <br/>
-  well wanna share something about you?
-  </br>
-  <textarea name="bio" rows="8" cols="40">
-  write here
-  
-  </textarea>
-	<br/>
-	
-	
-  <br/>
-  submit an image?
-  <input type="file" name="swapa image"/>
-  <br/>
-	<br/>
-  <input type="submit" value="submit!">
-	</h3>
- <br/>
-<input type="button" value="touch this" onclick="funky()"/>
-<input type="button" value="now touch this" onClick="alert('cool'); alert('nice job');"/ >
-</form>
-<br/>
-<a href="http://amazon.com" onMouseOver="alert('pretty sweet huh!');">hover over me</a>
+
+
+
+<header class=" flex body-font">
+    <div class="container mx-auto flex flex-wrap p-5  md:flex-row items-left">
+        <a class="title-font font-medium items-center  mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+        </a>
+        <span class="flex ml-3 text-xl">swapa</span>
+
+
+    </div>
+</header>
+
+<h2 class="text-center">Gallery</h2>
+
+<section class="body-font">
+    <div class="container mx-auto flex px-1 py-19 items-center justify-center flex-col">
+        <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-7 object-cover object-center rounded" alt="hero" src="https://source.unsplash.com/500x400/?bike,car,nature,gym">
+        <div class="text-center lg:w-2/3 w-full">
+            <h5 class="text-center">Tip: refresh the page to see new image</h5>
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 mt-3 font-medium ">Hit Hard
+            <p class="mb-8 leading-relaxed">Power Up</p>
+        </div>
+    </div>
+</section>
+
+<div class="mb-5">
+
+        <div id="about" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeAbout()">&times;</a>
+            <div class="overlay-content">
+                <img class="mb-2 center" src="p/lesely.jpg" width="120" height="150">
+                Hello There! this is swapa's assistant Lesely. Let me introduce my boss to you. He is a lazy Ass guy. He loves to play mobile games all the day. Book reading was never his hobby. He loves video editing and has good hands in some of good editing softwares. Apart,He loves to play football and YES! he is LEO MESSI's big fan.
+            </div>
+        </div>
+
+
+        <span class="pr-5 pl-2" style="font-size:15px;cursor:pointer" onclick="openAbout()"> About</span>
+
+        <script>
+            function openAbout() {
+                document.getElementById("about").style.width = "100%";
+            }
+
+            function closeAbout() {
+                document.getElementById("about").style.width = "0%";
+            }
+        </script>
+
+
+
+
+    <div id="skill" class="overlay ">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSkill()">&times;</a>
+
+
+
+
+        <div class="flex pt-20">
+
+        <div class="overlay-content inline-flex text-align">
+       <p class="pr-2 ml-2">CSS<p/>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        <div class="overlay-content inline-flex text-align">
+       <p class="pr-2 ml-2">HTML<p/>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </div>
+        </div>
+
+        <div class="flex pt-10">
+
+            <div class="overlay-content inline-flex text-align">
+            <p class="pr-2 ml-2">JAVA<p/>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+            <div class="overlay-content inline-flex text-align">
+            <p class="pr-2 ml-1">LARAVEL<p/>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+
+        </div>
+        </div>
+ <div class="flex pt-10 items-center">
+
+            <div class="overlay-content inline-flex ">
+            <p class="pr-2 ml-2">Video editing<p/>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+
+            <span class="fa fa-star"></span>
+
+        </div>
+
+    </div>
+        <div class="flex pt-10 items-center">
+
+            <div class="overlay-content inline-flex ">
+            <p class="pr-2 ml-2">Mysql<p/>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+
+            <span class="fa fa-star"></span>
+
+        </div>
+            <div class="overlay-content inline-flex ">
+            <p class="pr-1">Mongodb<p/>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+
+            <span class="fa fa-star"></span>
+
+        </div>
+
+    </div>
+    </div>
+
+
+    <span class="pr-3" style="font-size:15px;cursor:pointer" onclick="openSkill()">skil</span>
+
+        <script>
+            function openSkill() {
+                document.getElementById("skill").style.width = "100%";
+            }
+
+            function closeSkill() {
+                document.getElementById("skill").style.width = "0%";
+            }
+        </script>
+
+    <div id="about" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeAbout()">&times;</a>
+        <div class="overlay-content">
+            <img class="mb-2 center" src="p/lesely.jpg" width="120" height="150">
+            Hello There! this is swapa's assistant Lesely. Let me introduce my boss to you. He is a lazy Ass guy. He loves to play mobile games all the day. Book reading was never his hobby. He loves video editing and has good hands in some of good editing softwares. Apart,He loves to play football and YES! he is LEO MESSI's big fan.
+        </div>
+    </div>
+
+
+    <span class="pr-5 pl-2" style="font-size:15px;cursor:pointer" onclick="openAbout()"> About</span>
+
+    <script>
+        function openAbout() {
+            document.getElementById("about").style.width = "100%";
+        }
+
+        function closeAbout() {
+            document.getElementById("about").style.width = "0%";
+        }
+    </script>
+
+
+
+
+    </div>
+
+
+
+
+
+
+<footer class=" body-font pt-7">
+
+    <div class="bg-black">
+        <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class=" text-sm text-center sm:text-left">© 2020 tailblocks —
+                <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class=" ml-1" target="_blank">@knyttneve</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 ">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 ">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 ">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+        </div>
+    </div>
+</footer>
+
+
+
 </body>
-
 </html>
